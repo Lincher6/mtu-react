@@ -1,0 +1,23 @@
+.header {
+    font-family: sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &.light {
+        background: linear-gradient(to right, #d9a7c7, #fffcdc);
+        color: #222222;
+        border-bottom: 2px ridge grey;
+    }
+    &.dark {
+        background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+        color: #eeeeee;
+        border-bottom: 2px ridge lightgrey;
+    }
+    &.title {
+        color: #333333;
+    }
+}
