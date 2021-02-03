@@ -6,7 +6,10 @@ export default {
     title: 'Header',
     component: Header,
     argTypes: {
-        theme: { control: { type: 'inline-radio', options: ['light', 'dark'] } },
+        theme: {
+            control: { type: 'inline-radio', options: ['light', 'dark'] },
+            defaultValue: 'dark'
+        },
         authorized: { control: { type: 'boolean' }, defaultValue: true },
         title: { control: { type: 'text'} }
     }

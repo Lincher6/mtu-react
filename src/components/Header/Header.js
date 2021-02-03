@@ -23,7 +23,9 @@ export const Header = (props) => {
             </div>
             <Input theme={theme} placeholder={`search`}/>
             <Button
-                type={`outlined ${theme === 'light' ? 'secondary' : 'primary'}`}
+                type={`outlined`}
+                color={theme === 'light' ? 'secondary' : 'primary'}
+                size={`small`}
             >
                 {authorized ? 'Logout' : 'Login'}
             </Button>
