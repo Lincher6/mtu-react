@@ -12,6 +12,10 @@ export default {
             control: { type: 'inline-radio', options: ['primary', 'secondary', 'error'] },
             defaultValue: 'primary'
         },
+        size: {
+            control: { type: 'inline-radio', options: ['large', 'small'] },
+            defaultValue: 'large'
+        },
         type: { table: { disable: true } },
         onClick: { table: { disable: true } },
         disabled: { control: { type: 'boolean' } },

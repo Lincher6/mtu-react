@@ -11,8 +11,6 @@ $error: #ff0000;
     text-decoration: none;
     outline: none;
     background: none;
-    padding: 12px 20px;
-    font-size: 1.5rem;
     border-radius: 5px;
     transition: filter .3s, background .3s;
     color: #333333;
@@ -25,6 +23,16 @@ $error: #ff0000;
     }
     &:active {
         transform: translateY(1px);
+    }
+
+    &.large {
+        padding: 12px 20px;
+        font-size: 1.5rem;
+    }
+
+    &.small {
+        padding: 7px 13px;
+        font-size: 1.2rem;
     }
 
     &.contained {
