@@ -22,7 +22,7 @@ export default {
         },
         placeholder: { control: { type: 'text' }, defaultValue: 'Write some text' },
         errorText: { control: { type: 'text' } },
-        onChange: { table: { display: 'none' } }
+        onChange: { table: { disable: true } }
     }
 }
 
