@@ -1,12 +1,10 @@
 import React from 'react';
 import { Input } from './Input';
-import { Decorator } from '../Decorator/Deacorator';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
     title: 'Input',
     component: Input,
-    decorators: [story => <Decorator>{ story() }</Decorator>],
     argTypes: {
         type: {
             control: { type: 'inline-radio', options: ['text', 'password', 'email'] },
