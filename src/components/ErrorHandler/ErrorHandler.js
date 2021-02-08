@@ -11,19 +11,16 @@ export class ErrorHandler extends React.Component {
             componentStack: null,
             stackOpen: false
         };
-        this.onerror = window.onerror;
         this.tryAgain = this.tryAgain.bind(this);
         this.toggleStack = this.toggleStack.bind(this);
     }
 
 
     static getDerivedStateFromError() {
-        window.onerror = () => {};
         return { hasError: true };
     }
 
     componentDidCatch(error, { componentStack }) {
-        console.log(error)
         this.setState({
             error,
             componentStack
@@ -36,9 +33,7 @@ export class ErrorHandler extends React.Component {
             error: {},
             componentStack: null,
             stackOpen: false
-
         })
-        window.onerror = this.onerror;
     }
 
     toggleStack() {
