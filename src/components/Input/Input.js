@@ -1,5 +1,6 @@
 import React from "react";
-import './Input.scss';
+import classes from  './Input.module.scss';
+import cn from 'classnames';
 
 export const Input = (props) => {
 
@@ -7,23 +8,23 @@ export const Input = (props) => {
         type = 'text',
         theme = 'light',
         variant = 'regular',
-        placeholder,
+        placeholder = 'Some text',
         errorText, children, ...rest
     } = props;
 
     return (
-        <div className={`input ${theme}`}>
+        <div className={cn(classes.input, classes[theme])}>
             <input
                 required
                 type={type}
                 id='input'
                 {...rest}
-                className={`${variant} ${errorText && 'error'}`}
+                className={cn(classes[variant], errorText && classes.error)}
             />
             <label htmlFor="input">
                 {placeholder}
             </label>
-            <span className={`errorText ${!errorText && 'hide'}`}>
+            <span className ={cn(classes.errorText, !errorText && classes.hide)}>
                 {errorText}
             </span>
         </div>

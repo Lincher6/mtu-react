@@ -1,5 +1,6 @@
 import React from "react";
-import './Button.scss';
+import classes from './Button.module.scss';
+import cn from 'classnames';
 
 export const Button = (props) => {
     const {
@@ -7,12 +8,12 @@ export const Button = (props) => {
         color = 'primary',
         size = 'large',
         disabled = false,
-        onCLick, children, ...rest
+        onCLick, children = 'Button', ...rest
     } = props
 
     return (
         <button
-            className={`button ${color} ${type} ${size}`}
+            className={cn(classes.button, classes[color], classes[type], classes[size])}
             disabled={disabled}
             onClick={onCLick}
             {...rest}

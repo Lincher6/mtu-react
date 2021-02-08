@@ -1,7 +1,8 @@
 import React from "react";
-import './Header.scss';
-import {Button} from '../Button/Button';
-import {Input} from '../Input/Input';
+import classes from './Header.module.scss';
+import cn from 'classnames';
+import { Button } from '../Button/Button';
+import { Input } from '../Input/Input';
 
 export const Header = (props) => {
     const {
@@ -12,12 +13,9 @@ export const Header = (props) => {
     } = props;
 
     return (
-        <div className={`header ${theme}`} {...rest}>
+        <div className={cn(classes.header, classes[theme])} {...rest}>
             <div>
-                <h1>
-
-                </h1>
-                <h1 className={`title`}>
+                <h1 className={classes.title}>
                     {title}
                 </h1>
             </div>
