@@ -1,0 +1,24 @@
+.error {
+  padding: 10px;
+  font-family: sans-serif;
+
+  &>div, button {
+    margin-bottom: 10px;
+  }
+
+  .message {
+    font-size: 1.2rem;
+    color: red;
+  }
+
+  .stack {
+    white-space: pre-line;
+    font-size: .7rem;
+  }
+
+  .toggle {
+    cursor: pointer;
+    color: darkred;
+    vertical-align: middle;
+  }
+}

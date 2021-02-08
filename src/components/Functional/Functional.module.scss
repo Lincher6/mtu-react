@@ -1,0 +1,27 @@
+.functional {
+  font-family: sans-serif;
+  .state {
+    color: orangered;
+  }
+  .props {
+    color: deepskyblue;
+  }
+
+  .colors {
+    display: flex;
+    align-items: center;
+  }
+
+  .cell {
+    margin: 0 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    &.state {
+      background-color: orangered;
+    }
+    &.props {
+      background-color: deepskyblue;
+    }
+  }
+}

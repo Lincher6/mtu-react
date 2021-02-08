@@ -1,0 +1,14 @@
+.noAccess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+
+  &>span {
+    margin-bottom: 5px;
+  }
+
+  & span:first-child {
+    font-size: 1.5rem;
+  }
+}
